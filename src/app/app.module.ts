@@ -14,6 +14,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MenuComponent } from './menu/menu.component';
 import { DeleteBoxComponent } from './delete-box/delete-box.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 
 const routes: Routes = [
   {path: 'incidents', component: IncidentListComponent},
@@ -34,7 +35,8 @@ const routes: Routes = [
     PageNotFoundComponent,
     HomeComponent,
     MenuComponent,
-    DeleteBoxComponent
+    DeleteBoxComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,4 @@
+<p *ngIf="inputProgress >= 0 && inputProgress <= 25"><ngb-progressbar [showValue]="true" type="danger" [value]="inputProgress"></ngb-progressbar></p>
+<p *ngIf="inputProgress > 25 && inputProgress <= 50"><ngb-progressbar [showValue]="true" type="warning" [value]="inputProgress"></ngb-progressbar></p>
+<p *ngIf="inputProgress > 50 && inputProgress <= 75"><ngb-progressbar [showValue]="true" type="info" [value]="inputProgress"></ngb-progressbar></p>
+<p *ngIf="inputProgress > 75 && inputProgress <= 100"><ngb-progressbar [showValue]="true" type="success" [value]="inputProgress"></ngb-progressbar></p>

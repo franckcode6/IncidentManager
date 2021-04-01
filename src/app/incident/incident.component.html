@@ -18,5 +18,5 @@
     <p *ngIf="incident?.open === false"><strong>FERME</strong></p>
   </div>
 </div>
-<p><ngb-progressbar type="dark" [value]="incident?.progress"></ngb-progressbar></p>
+<app-progress-bar [inputProgress]="incident.progress"></app-progress-bar>
 

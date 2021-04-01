@@ -11,8 +11,6 @@
 
 <form [formGroup]="myForm" (ngSubmit)="submitForm()">
 
-  <section class="d-flex justify-content-around form">
-    <div class="d-flex flex-column">
       <div class="form-group">
         <label for="formTitre">Titre de l'incident</label>
         <input type="text" class="form-control" formControlName="titre" id="formTitre">
@@ -29,9 +27,6 @@
                placeholder="lemmy@jackdaniels.com">
       </div>
 
-    </div>
-
-    <div class="d-flex flex-column">
       <div class="form-group">
         <label for="formProgress">Progression (%)</label>
         <input type="number" class="form-control" formControlName="progress" id="formProgress">
@@ -59,9 +54,6 @@
         <label class="form-check-label" for="formOpen">Ouvert?  </label>
         <input type="checkbox" class="form-check-label" formControlName="open" id="formOpen">
       </div>
-      <button type="submit" class="btn btn-success btn-sm mt-4">Ajouter</button>
-    </div>
 
-  </section>
-
+      <button type="submit" class="btn btn-success mt-4">Ajouter</button>
 </form>
