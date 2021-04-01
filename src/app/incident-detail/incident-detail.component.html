@@ -1,0 +1,30 @@
+<h2>Détail de l'incident</h2>
+<app-delete-box class="alert" *ngIf="deletedBox" (actionEvt)="getEtatFromParent($event)" [inputtitle]="incident.titre" [inputid]="incident.id"></app-delete-box>
+<div class="d-flex justify-content-between ticket"
+     [ngClass]="{
+'closed': this.incident?.open === false,
+'fatal': this.incident?.level == 'FATAL',
+'error': this.incident?.level == 'ERROR',
+'medium': this.incident?.level == 'MEDIUM',
+'minor': this.incident?.level == 'MINOR'
+}">
+  <div>
+    <h4><strong>Incident : </strong> {{incident?.titre}} ({{incident?.id}})</h4>
+    <p><strong>Créé le : </strong> {{incident?.dateCreation}}</p>
+    <p *ngIf="incident?.dateModification"><strong>Modifié le : </strong> {{incident?.dateModification}}</p>
+    <p><strong>Description : </strong>{{incident?.description}}</p>
+  </div>
+  <div>
+    <p *ngIf="incident?.open"><strong>OUVERT</strong></p>
+    <p *ngIf="incident?.open === false"><strong>FERME</strong></p>
+    <p><strong>Level : </strong>{{incident?.level}}</p>
+    <p><strong>Type : </strong>{{incident?.type}}</p>
+  </div>
+</div>
+<p>
+  <ngb-progressbar type="dark" [value]="incident?.progress"></ngb-progressbar>
+</p>
+
+<div class="mt-2">
+  <button class="btn btn-danger btn-sm" (click)="deletedBox = !deletedBox">Supprimer l'incident</button>
+</div>

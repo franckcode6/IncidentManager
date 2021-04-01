@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-between"
+[ngClass]="{
+'closed': this.incident.open === false,
+'fatal': this.incident.level == 'FATAL',
+'error': this.incident.level == 'ERROR',
+'medium': this.incident.level == 'MEDIUM',
+'minor': this.incident.level == 'MINOR'
+}">
+  <div>
+    <h4>Incident n° {{incident?.id}} : "{{incident?.titre}}"</h4>
+    <p><strong>Date de création : </strong>{{incident?.dateCreation}}</p>
+    <button class="btn btn-light btn-sm"><a [routerLink]="['/incidents', incident?.id]">Plus d'infos</a></button>
+  </div>
+  <div>
+    <p><strong>Level : </strong>{{incident?.level}}</p>
+    <p><strong>Type : </strong>{{incident?.type}}</p>
+    <p *ngIf="incident?.open"><strong>OUVERT</strong></p>
+    <p *ngIf="incident?.open === false"><strong>FERME</strong></p>
+  </div>
+</div>
+<p><ngb-progressbar type="dark" [value]="incident?.progress"></ngb-progressbar></p>
+

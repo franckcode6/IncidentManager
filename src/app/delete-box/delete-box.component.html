@@ -1,0 +1,7 @@
+Etes vous sûr de vouloir supprimer le produit : {{inputtitle}} ({{inputid}})?
+Tappez "OUI" pour confirmer.<br>
+<input type="text" [(ngModel)]="inputValue">
+<div *ngIf="inputValue === 'OUI' ">
+  <button (click)="confirmRemove()">Oui</button>
+  <button (click)="cancelRemove()">Non</button>
+</div>

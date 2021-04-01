@@ -1,0 +1,28 @@
+:host > div{
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.fatal {
+  background-color: #FFB2B2;
+}
+
+.error {
+  background-color: #F5C6C6;
+}
+
+.medium {
+  background-color: #FFD3B2;
+}
+
+.minor {
+  background-color: #FFECB2;
+}
+
+.closed {
+  background-color: #FAFAFA;
+}
+
+a {
+  color: inherit;
+}
