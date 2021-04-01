@@ -20,7 +20,4 @@ export class IncidentListComponent implements OnInit {
     this.incidents = this.is.findAll();
   }
 
-  progressColor($event: Incident): void {
-    this.progIncident = $event;
-  }
 }

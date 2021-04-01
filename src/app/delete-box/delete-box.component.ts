@@ -13,9 +13,10 @@ export class DeleteBoxComponent implements OnInit {
   inputValue = '';
 
 
-  constructor() { }
+  constructor() {
+  }
 
-   cancelRemove(): void {
+  cancelRemove(): void {
     this.actionEvt.emit(false);
   }
 

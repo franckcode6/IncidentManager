@@ -1,11 +1,12 @@
 <div class="d-flex justify-content-between"
-[ngClass]="{
+     [ngClass]="{
 'closed': this.incident.open === false,
 'fatal': this.incident.level == 'FATAL',
 'error': this.incident.level == 'ERROR',
 'medium': this.incident.level == 'MEDIUM',
 'minor': this.incident.level == 'MINOR'
 }">
+
   <div>
     <h4>Incident n° {{incident?.id}} : "{{incident?.titre}}"</h4>
     <p><strong>Date de création : </strong>{{incident?.dateCreation}}</p>
@@ -18,5 +19,6 @@
     <p *ngIf="incident?.open === false"><strong>FERME</strong></p>
   </div>
 </div>
+
 <app-progress-bar [inputProgress]="incident.progress"></app-progress-bar>
 

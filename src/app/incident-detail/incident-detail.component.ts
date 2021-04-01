@@ -22,10 +22,10 @@ export class IncidentDetailComponent implements OnInit {
     this.is.findOne(Number(id)).subscribe(incident => this.incident = incident);
   }
 
-   getEtatFromParent(etat: boolean): void {
-    if(etat){
+  getEtatFromParent(etat: boolean): void {
+    if (etat) {
       this.delete();
-    }else {
+    } else {
       this.deletedBox = false;
     }
   }

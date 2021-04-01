@@ -35,7 +35,6 @@ export class IncidentAddComponent implements OnInit {
     } else {
       console.error('INVALID FORM');
     }
-
   }
 
 }

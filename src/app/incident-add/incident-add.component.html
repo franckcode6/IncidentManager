@@ -10,50 +10,49 @@
 </ul>
 
 <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+  <div class="form-group">
+    <label for="formTitre">Titre de l'incident</label>
+    <input type="text" class="form-control" formControlName="titre" id="formTitre">
+  </div>
 
-      <div class="form-group">
-        <label for="formTitre">Titre de l'incident</label>
-        <input type="text" class="form-control" formControlName="titre" id="formTitre">
-      </div>
+  <div class="form-group">
+    <label for="formDescription">Description</label>
+    <textarea class="form-control" formControlName="description" id="formDescription" cols="10" rows="5"></textarea>
+  </div>
 
-      <div class="form-group">
-        <label for="formDescription">Description</label>
-        <textarea class="form-control" formControlName="description" id="formDescription" cols="10" rows="5"></textarea>
-      </div>
+  <div class="form-group">
+    <label for="formEmail">Adresse email</label>
+    <input type="email" class="form-control" formControlName="email" id="formEmail"
+           placeholder="frommarstosirius@bestgojira.com">
+  </div>
 
-      <div class="form-group">
-        <label for="formEmail">Adresse email</label>
-        <input type="email" class="form-control" formControlName="email" id="formEmail"
-               placeholder="frommarstosirius@bestgojira.com">
-      </div>
+  <div class="form-group">
+    <label for="formProgress">Progression (%)</label>
+    <input type="number" class="form-control" formControlName="progress" id="formProgress">
+  </div>
 
-      <div class="form-group">
-        <label for="formProgress">Progression (%)</label>
-        <input type="number" class="form-control" formControlName="progress" id="formProgress">
-      </div>
+  <div class="form-group">
+    <label for="formType">Type d'incident</label>
+    <select class="form-control" id="formType" formControlName="type">
+      <option value="BUG">BUG</option>
+      <option value="FEATURE">FEATURE</option>
+    </select>
+  </div>
 
-      <div class="form-group">
-        <label for="formType">Type d'incident</label>
-        <select class="form-control" id="formType" formControlName="type">
-          <option value="BUG">BUG</option>
-          <option value="FEATURE">FEATURE</option>
-        </select>
-      </div>
+  <div class="form-group">
+    <label for="formLevel">Level de l'incident</label>
+    <select class="form-control" id="formLevel" formControlName="level">
+      <option value="FATAL">FATAL</option>
+      <option value="ERROR">ERROR</option>
+      <option value="MEDIUM">MEDIUM</option>
+      <option value="MINOR">MINOR</option>
+    </select>
+  </div>
 
-      <div class="form-group">
-        <label for="formLevel">Level de l'incident</label>
-        <select class="form-control" id="formLevel" formControlName="level">
-          <option value="FATAL">FATAL</option>
-          <option value="ERROR">ERROR</option>
-          <option value="MEDIUM">MEDIUM</option>
-          <option value="MINOR">MINOR</option>
-        </select>
-      </div>
+  <div class="form-check">
+    <label class="form-check-label" for="formOpen">Ouvert?  </label>
+    <input type="checkbox" class="form-check-label" formControlName="open" id="formOpen">
+  </div>
 
-      <div class="form-check">
-        <label class="form-check-label" for="formOpen">Ouvert?  </label>
-        <input type="checkbox" class="form-check-label" formControlName="open" id="formOpen">
-      </div>
-
-      <button type="submit" class="btn btn-success mt-4">Ajouter</button>
+  <button type="submit" class="btn btn-success mt-4">Ajouter</button>
 </form>

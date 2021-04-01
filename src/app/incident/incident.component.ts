@@ -8,10 +8,11 @@ import {Incident} from '../model/incident';
 })
 export class IncidentComponent implements OnInit {
 
-   @Input() incident: Incident;
-   @Output() eventEmit = new EventEmitter<Incident>();
+  @Input() incident: Incident;
+  @Output() eventEmit = new EventEmitter<Incident>();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.eventEmit.emit(this.incident);
